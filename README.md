@@ -7,7 +7,4 @@ I am currentlly managing the project on this [link](https://github.com/hakanonal
 
 I am also discovering and experimenting what type of code should I develop by using the following [notebook](https://github.com/hakanonal/geodashml/blob/master/experiment.ipynb). I keep this notebook as a journal. I write down all my toughts experiments, hurdeles, which pages I have checked to solve, vb...
 
-### 06.05.2020 Update:
-After coding some time, I have discovered that selenium can not properlly send keystrokes to scratch. selenium is actually working very well some other page however what I bealive that scratch has some preventive code to automate actions. That's why I am changing course for this project. I am trying to find another environment for the game.
-
 Hakan
