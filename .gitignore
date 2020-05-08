@@ -131,3 +131,4 @@ dmypy.json
 
 .vscode/settings.json
 *.h5
+wandb/
