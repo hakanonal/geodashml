@@ -9,17 +9,14 @@ import wandb
 from agent import agent
 
 class environment:
-    def __init__(self):
-        wandb.init(project="geodashml")
-        self.config = {
-            'discount': 0.95,
-            'exploration_rate': 0.9,
-            'decay_factor': 0.9999,
-            'learning_rate': 0.1,
-            'episode': 1,
-            'hide_browser' : 1
-        }
-        self.config = wandb.config
+    def __init__(self, config=None):
+
+        if(config is None):
+            wandb.init(project="geodashml")
+            self.config = wandb.config
+        else:
+            wandb.init(project="geodashml",config=config)
+            self.config = config
         self.agent = agent(
             discount=self.config['discount'],
             exploration_rate=self.config['exploration_rate'],
