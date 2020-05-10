@@ -40,7 +40,7 @@ class environment:
         flag_element = self.browser_driver.find_element_by_css_selector(".green-flag_green-flag_1kiAo")
         time.sleep(1)
         flag_element.click()
-        time.sleep(3)
+        time.sleep(5)
         self.browser_html_element = self.browser_driver.find_element_by_tag_name("html")
         self.browser_pause_down = webdriver.ActionChains(self.browser_driver).move_to_element(self.browser_html_element).key_down("p")
         self.browser_pause_up = webdriver.ActionChains(self.browser_driver).move_to_element(self.browser_html_element).key_up("p")
