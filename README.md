@@ -12,4 +12,6 @@ I have completed the initial [project](https://github.com/hakanonal/geodashml/pr
 
 A new [project](https://github.com/hakanonal/geodashml/projects/3) has been opened for optimzing hyper parameters. Please chip-in if your heart goes in here...
 
+Please do not hesitate to open an [issue](https://github.com/hakanonal/geodashml/issues/new) if you want to make any contribution or you have some questions. 
+
 Hakan
