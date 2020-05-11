@@ -3,7 +3,7 @@ This repositories goal is to develop a network that plays the geometry dash game
 
 This project is currentlly in progess. I have started this repository to teach myself by doing it. If you have any contributions please do not hesitate to chip-in. Thanks.
 
-~~I am currentlly managing the project on this [link](https://github.com/hakanonal/geodashml/projects/1). You can follow my ideas from there. I am pretty sure that ideas is going to evolve in time so you will always find the last snapshot there. This first project's aim is to develop first version of environment agent and starting to reinforce learning.~~~
+~~I am currentlly managing the project on this [link](https://github.com/hakanonal/geodashml/projects/1). You can follow my ideas from there. I am pretty sure that ideas is going to evolve in time so you will always find the last snapshot there. This first project's aim is to develop first version of environment agent and starting to reinforce learning.~~
 
 I am also discovering and experimenting what type of code should I develop by using the following [notebook](https://github.com/hakanonal/geodashml/blob/master/experiment.ipynb). I keep this notebook as a journal. I write down all my toughts experiments, hurdeles, which pages I have checked to solve, vb...
 
