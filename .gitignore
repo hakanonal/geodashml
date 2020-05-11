@@ -15,6 +15,7 @@ downloads/
 eggs/
 .eggs/
 lib/
+bin/
 lib64/
 parts/
 sdist/
@@ -104,6 +105,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+pyvenv.cfg
 env/
 venv/
 ENV/
@@ -132,3 +134,4 @@ dmypy.json
 .vscode/settings.json
 *.h5
 wandb/
+nohup.out
