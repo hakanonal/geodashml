@@ -1,7 +1,7 @@
 program: train.py
 method: bayes
 metric:
-    name: reward
+    name: avg_reward
     goal: maximize
 parameters:
     discount:
@@ -12,7 +12,7 @@ parameters:
         max: 0.9
     decay_factor:
         min: 0.9
-        max: 1.1
+        max: 0.9999
     learning_rate:
         min: 0.0001
         max: 0.1
