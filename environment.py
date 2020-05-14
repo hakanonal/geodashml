@@ -91,7 +91,7 @@ class environment:
                 'reward':self.reward,
                 'duration' : self.duration,
                 'tot_duration' : self.tot_duration,
-
+                'avg_duration' : self.tot_duration/episode,
             }
             wandb.log(metrics,step=episode)
 
