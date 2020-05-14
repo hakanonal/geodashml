@@ -28,6 +28,7 @@ class environment:
         self.tot_reward = 0
         self.tot_penalty = 0
         self.tot_valid = 0
+        self.tot_duration = 0
         
         self.browser_options = webdriver.ChromeOptions()
         if self.config['hide_browser']:
@@ -58,6 +59,7 @@ class environment:
         for episode in range(1,self.config['episode']+1):
             self.reward = 0
             past_reward = 0
+            time_start = time.time()
             while True:
                 old_state = self.readState()
                 action_to_play = self.agent.get_next_action(old_state)
@@ -74,6 +76,9 @@ class environment:
                     self.tot_valid += 1
                 past_reward = self.reward
             
+            time_end = time.time()
+            self.duration = time_end -  time_start
+            self.tot_duration += self.duration
             metrics = {
                 'tot_valid' : self.tot_valid,
                 'avg_valid' : self.tot_valid/episode,
@@ -84,6 +89,9 @@ class environment:
                 'tot_reward' : self.tot_reward,
                 'avg_reward' : self.tot_reward/episode,
                 'reward':self.reward,
+                'duration' : self.duration,
+                'tot_duration' : self.tot_duration,
+
             }
             wandb.log(metrics,step=episode)
 
