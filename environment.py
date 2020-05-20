@@ -34,7 +34,7 @@ class environment:
         if self.config['hide_browser']:
             self.browser_options.add_argument('headless')
         self.browser_driver = webdriver.Chrome(executable_path="/usr/local/bin/chromedriver", chrome_options=self.browser_options)
-        self.browser_wait = WebDriverWait(self.browser_driver,timeout=10)
+        self.browser_wait = WebDriverWait(self.browser_driver,timeout=20)
 
         self.browser_driver.get('https://scratch.mit.edu/projects/105500895/embed')
         self.browser_wait.until(lambda d: d.find_element_by_css_selector(".green-flag_green-flag_1kiAo"))
@@ -59,9 +59,9 @@ class environment:
         for episode in range(1,self.config['episode']+1):
             self.reward = 0
             past_reward = 0
-            time_start = time.time()
+            old_state = self.readState()
             while True:
-                old_state = self.readState()
+                time_start = time.time()
                 action_to_play = self.agent.get_next_action(old_state)
                 self.playAction(action_to_play)
                 new_state = self.readState()
@@ -75,10 +75,11 @@ class environment:
                 else:
                     self.tot_valid += 1
                 past_reward = self.reward
+                old_state = new_state
+                time_end = time.time()
+                self.duration = time_end - time_start
+                self.tot_duration += self.duration
             
-            time_end = time.time()
-            self.duration = time_end -  time_start
-            self.tot_duration += self.duration
             metrics = {
                 'tot_valid' : self.tot_valid,
                 'avg_valid' : self.tot_valid/episode,
